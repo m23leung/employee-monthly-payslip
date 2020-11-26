@@ -1,7 +1,9 @@
 /****************************************************
  * Purpose: Main entry to program
  *****************************************************/
+import Parser from "./src/components/parser";
 
+const parser = new Parser();
 // **********************************
 //   ReadLine Input - User Interface
 // **********************************
@@ -22,25 +24,8 @@ readLine.on("line", (input) => {
     process.exit(0);
   }
 
-  //robot.handleCommand(input);
-  //readLine.prompt();
-
-  let inputLine = input.trim();
-
-  let firstIndex = inputLine.indexOf('"');
-  let lastIndex = inputLine.indexOf('"', firstIndex + 1);
-
-  console.log(`firstIndex: ${firstIndex} , lastIndex: ${lastIndex}`);
-
-  let inputLineArgs = inputLine.split(" ");
-
-  let command = inputLineArgs[0];
-  let name = inputLine.substring(firstIndex, lastIndex + 1);
-  let salary = inputLineArgs[inputLineArgs.length - 1];
-
-  console.log(`${command} ${name} ${salary}`);
-
-  process.exit(0);
+  parser.parseCommand(input);
+  readLine.prompt();
 });
 
 // Set Ending Prompt
