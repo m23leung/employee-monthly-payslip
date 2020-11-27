@@ -14,6 +14,7 @@ describe("parser - parseCommand", function () {
       `GenerateMonthlyPayslip "Bob Song" 0`
     );
     expect(isValidInput).to.be.equal(true);
+
     isValidInput = parserObj.parseCommand(
       `GenerateMonthlyPayslip "Mary Song" 60000`
     );
@@ -25,6 +26,17 @@ describe("parser - parseCommand", function () {
     expect(isValidInput).to.be.equal(false);
 
     isValidInput = parserObj.parseCommand(`MonkeyCommand "Mary Song" Barrel`);
+    expect(isValidInput).to.be.equal(false);
+
+    isValidInput = parserObj.parseCommand(`GenerateMonthlyPayslip "Mary Song"`);
+    expect(isValidInput).to.be.equal(false);
+
+    isValidInput = parserObj.parseCommand(
+      `GenerateMonthlyPayslip "Mary Song" -40000`
+    );
+    expect(isValidInput).to.be.equal(false);
+
+    isValidInput = parserObj.parseCommand(`GenerateMonthlyPayslip`);
     expect(isValidInput).to.be.equal(false);
 
     isValidInput = parserObj.parseCommand(``);
