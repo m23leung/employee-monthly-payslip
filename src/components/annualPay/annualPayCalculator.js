@@ -1,7 +1,7 @@
 /************************************************************
  * Purpose: Calculates annual pay data
  *************************************************************/
-import incomeTaxAnnual from "../../../constants/incomeTaxAnnual.js";
+import incomeTaxAnnual from "../../constants/incomeTaxAnnual.js";
 
 export default class annualPayCalculator {
   /**

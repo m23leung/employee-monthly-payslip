@@ -1,7 +1,7 @@
 /************************************************************
  * Purpose: Calculates income tax
  *************************************************************/
-import incomeTaxAnnual from "../../constants/incomeTaxAnnual.js";
+import incomeTaxAnnual from "../constants/incomeTaxAnnual.js";
 import monthlyPayCalculator from "./monthlyPay/monthlyPayCalculator";
 import annualPayCalculator from "./annualPay/annualPayCalculator";
 
@@ -16,7 +16,12 @@ export default class incomeTaxCalculator {
    * @param annualSalary
    */
   calcMonthlyPayData(annualSalary) {
-    const annualIncomeTax = this.annualPay.calcAnnualIncomeTax(annualSalary);
-    return this.monthlyPay.calcMonthlyPayData(annualSalary, annualIncomeTax);
+    const annualIncomeTax = this.annualPayCalculator.calcAnnualIncomeTax(
+      annualSalary
+    );
+    return this.monthlyPayCalculator.calcMonthlyPayData(
+      annualSalary,
+      annualIncomeTax
+    );
   }
 }

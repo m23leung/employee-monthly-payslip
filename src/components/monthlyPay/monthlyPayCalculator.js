@@ -1,17 +1,16 @@
 /************************************************************
  * Purpose: Calculates monthly pay data
  *************************************************************/
-import annualPay from "../annualPay/annualPayCalculator";
-
 export default class monthlyPayCalculator {
   /**
    * Calculates monthly pay data
    * @param annualSalary
+   * @param annualIncomeTax
    */
   calcMonthlyPayData(annualSalary, annualIncomeTax) {
-    const monthlyIncome = (annualSalary / 12).toFixed(0);
-    const monthlyIncomeTax = (annualIncomeTax / 12).toFixed(0);
-    const monthlyIncomeNet = (monthlyIncome - monthlyIncomeTax).toFixed(0);
+    const monthlyIncome = Math.round(annualSalary / 12);
+    const monthlyIncomeTax = Math.round(annualIncomeTax / 12);
+    const monthlyIncomeNet = Math.round(monthlyIncome - monthlyIncomeTax);
 
     return {
       income: monthlyIncome,

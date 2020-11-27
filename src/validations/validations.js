@@ -2,7 +2,7 @@
  * Purpose: Contains all the validation functions
  *****************************************************/
 
-import errorMessages from "../../constants/errorMessages";
+import errorMessages from "../constants/errorMessages";
 
 /**
  * Checks if the number is valid

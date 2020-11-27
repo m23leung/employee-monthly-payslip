@@ -3,8 +3,8 @@
  *************************************************************/
 import incomeTaxCalculator from "./incomeTaxCalculator";
 import payslipGenerator from "./payslipGenerator";
-import commandList from "../../constants/commandList";
-import errorMessages from "../../constants/errorMessages";
+import commandList from "../constants/commandList";
+import errorMessages from "../constants/errorMessages";
 import { isValidNumber, isPositiveSalary } from "../validations/validations";
 
 export default class parser {
@@ -23,23 +23,25 @@ export default class parser {
 
     let inputLineArgs = inputLine.split(" ");
 
-    const command = inputLineArgs[0];
+    const command = inputLineArgs[0].toLowerCase();
     const empName = inputLine.substring(firstIndexName, lastIndexName + 1);
     const annualSalary = inputLineArgs[inputLineArgs.length - 1];
 
-    if (command.toLowerCase() == commandList.MONTHLY_SLIP) {
+    if (command == commandList.MONTHLY_SLIP) {
       // TODO: Parse name for errors
 
       // If annual salary is negative or not number, throw error. Do not generate slip
       if (!isValidNumber(annualSalary)) {
-        return;
+        return false;
       } else if (!isPositiveSalary(annualSalary)) {
-        return;
+        return false;
       }
 
       this.payslipGenerator.generateMonthlyPayslip(empName, annualSalary);
+      return true;
     } else {
       console.log(errorMessages.invalidCommand);
+      return false;
     }
   }
 }

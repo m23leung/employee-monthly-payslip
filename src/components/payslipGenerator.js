@@ -28,5 +28,7 @@ export default class payslipGenerator {
     console.log(`Monthly Income Tax: $${monthlyIncomeTax}`);
     console.log(`Net Monthly Income: $${monthlyIncomeNet}`);
     console.log(`=========================================`);
+
+    return true;
   }
 }
