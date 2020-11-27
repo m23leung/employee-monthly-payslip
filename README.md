@@ -8,6 +8,8 @@
 - [Design and Architecture](#design-and-architecture)
 - [Conclusion](#conclusion)
 
+<img src="payslip.png" alt="payslip" width="415" height="515"/>
+
 ## Description
 
 Create a console application that given employee annual salary details outputs a monthly pay slip.
@@ -43,8 +45,8 @@ For example, for an employee with an annual salary of \$60,000:
   = 5,000
 
 - monthly income tax
-  = ((20,000 _ 0) + ((40,000 - 20,000) _ 0.1) + (60,000 - 40,000) _ 0.2)) / 12
-  = (0 + (20,000 _ 0.1) + (20,000 \* 0.2)) /12
+  = ((20,000 \* 0) + ((40,000 - 20,000) \* 0.1) + (60,000 - 40,000) \* 0.2)) / 12
+  = (0 + (20,000 \* 0.1) + (20,000 \* 0.2)) / 12
   = ( 0 + 2,000 + 4,000) /12
   = 500
 
