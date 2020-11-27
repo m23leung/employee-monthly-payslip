@@ -8,8 +8,6 @@
 - [Design and Architecture](#design-and-architecture)
 - [Conclusion](#conclusion)
 
-<img src="zombie.png" alt="zombie" width="415" height="515"/>
-
 ## Description
 
 Create a console application that given employee annual salary details outputs a monthly pay slip.
@@ -56,14 +54,14 @@ For example, for an employee with an annual salary of \$60,000:
 
 Here is example consone input:
 
-GenerateMonthlyPayslip "Mary Song" 60000
+- GenerateMonthlyPayslip "Mary Song" 60000
 
 and example output:
 
-Monthly Payslip for : "Mary Song"
-Gross Monthly Income: $5000
-Monthly Income Tax: $500
-Net Monthly Income: \$4500
+- Monthly Payslip for : "Mary Song"
+- Gross Monthly Income: \$5000
+- Monthly Income Tax: \$500
+- Net Monthly Income: \$4500
 
 EXIT
 
@@ -90,6 +88,8 @@ Note: Please make sure to have node.js installed.
    > npm test
 
 ## Design and Architecture
+
+- I have developed this program using an OOP approach, where ES6 classes are used to preserve encapsulation.
 
 ## Testing
 
