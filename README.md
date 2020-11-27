@@ -93,6 +93,8 @@ Note: Please make sure to have node.js installed.
 
 - I have developed this program using an OOP approach, where ES6 classes are used to preserve encapsulation.
 
+![execution flow diagram](architecture_flow.png)
+
 ## Testing
 
 - I have implemented TDD during development, with unit and integration testing. Please see test folder.

@@ -21,13 +21,18 @@ describe("parser - parseCommand", function () {
     expect(isValidInput).to.be.equal(true);
   });
 
-  it(`Invalid - parseCommand`, function () {
+  it(`Invalid - parseCommand - Invalid Command`, function () {
     isValidInput = parserObj.parseCommand(`MonkeyCommand "Mary Song" 60000`);
     expect(isValidInput).to.be.equal(false);
 
     isValidInput = parserObj.parseCommand(`MonkeyCommand "Mary Song" Barrel`);
     expect(isValidInput).to.be.equal(false);
 
+    isValidInput = parserObj.parseCommand(``);
+    expect(isValidInput).to.be.equal(false);
+  });
+
+  it(`Invalid - parseCommand - Invalid Args`, function () {
     isValidInput = parserObj.parseCommand(`GenerateMonthlyPayslip "Mary Song"`);
     expect(isValidInput).to.be.equal(false);
 
@@ -37,9 +42,6 @@ describe("parser - parseCommand", function () {
     expect(isValidInput).to.be.equal(false);
 
     isValidInput = parserObj.parseCommand(`GenerateMonthlyPayslip`);
-    expect(isValidInput).to.be.equal(false);
-
-    isValidInput = parserObj.parseCommand(``);
     expect(isValidInput).to.be.equal(false);
   });
 });
