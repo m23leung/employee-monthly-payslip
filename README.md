@@ -52,7 +52,7 @@ For example, for an employee with an annual salary of \$60,000:
   = 5,000 - 500
   = 4,500
 
-Here is example consone input:
+Here is example console input:
 
 - GenerateMonthlyPayslip "Mary Song" 60000
 
