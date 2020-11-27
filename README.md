@@ -8,7 +8,7 @@
 - [Design and Architecture](#design-and-architecture)
 - [Conclusion](#conclusion)
 
-<img src="payslip.png" alt="payslip" width="415" height="515"/>
+<img src="payslip.png" alt="payslip" width="215" height="315"/>
 
 ## Description
 
