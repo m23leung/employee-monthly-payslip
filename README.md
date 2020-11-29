@@ -65,10 +65,6 @@ and example output:
 - Monthly Income Tax: \$500
 - Net Monthly Income: \$4500
 
-EXIT
-
-- Will close the program
-
 ## Technology Stack
 
 - Javascript
@@ -91,12 +87,17 @@ Note: Please make sure to have node.js installed.
 
 ## Design and Architecture
 
-- I have developed this program using an OOP approach, where ES6 classes are used to preserve encapsulation.
-
 ![execution flow diagram](architecture_flow.png)
+
+- Single responsibility principle was implemented to design the above architecture diagram.
+- Recursion was used to calculate the total taxable amount on the annual income (See annualPayCalculator.js).
+- Any constant/configurable data are stored in constants folder (Valid commands, Error messages, annual income tax table).
+- Some error checking has been added to ensure valid commands & arguments are entered. Otherwise, it will throw an error.
 
 ## Testing
 
-- I have implemented TDD during development, with unit and integration testing. Please see test folder.
+- I have implemented TDD during development, with proper unit testing. Please see test folder for the test cases.
 
-## Assumptions and improvements
+## Assumptions
+
+- I have made the assumption that if the annual salary entered is negative, to not generate the monthly payslip and instead, throw an error.

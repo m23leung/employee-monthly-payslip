@@ -9,7 +9,7 @@ describe("monthlyPayCalculator - calcMonthlyPayData", function () {
   const monthlyPayCalc = new monthlyPayCalculator();
 
   // Taxable Income Range: $0 - $20,000
-  it(`Valid - calcMonthlyPayData -$0`, function () {
+  it(`Valid - calcMonthlyPayData $0`, function () {
     const annualSalary = 0;
     const annualIncomeTax = 0;
     const monthlyIncomeTax = monthlyPayCalc.calcMonthlyPayData(
@@ -22,7 +22,7 @@ describe("monthlyPayCalculator - calcMonthlyPayData", function () {
   });
 
   // Taxable Income Range: $0 - $20,000
-  it(`Valid - calcMonthlyPayData -$10000`, function () {
+  it(`Valid - calcMonthlyPayData $10000`, function () {
     const annualSalary = 10000;
     const annualIncomeTax = 0;
     const monthlyIncomeTax = monthlyPayCalc.calcMonthlyPayData(
@@ -35,7 +35,7 @@ describe("monthlyPayCalculator - calcMonthlyPayData", function () {
   });
 
   // Taxable Income Range: $20,001 - $40,000
-  it(`Valid - calcMonthlyPayData -$30000`, function () {
+  it(`Valid - calcMonthlyPayData $30000`, function () {
     const annualSalary = 30000;
     const annualIncomeTax = 1000;
     const monthlyIncomeTax = monthlyPayCalc.calcMonthlyPayData(
@@ -48,7 +48,7 @@ describe("monthlyPayCalculator - calcMonthlyPayData", function () {
   });
 
   // Taxable Income Range: $40,001 - $80,000
-  it(`Valid - calcMonthlyPayData -$60000`, function () {
+  it(`Valid - calcMonthlyPayData $60000`, function () {
     const annualSalary = 60000;
     const annualIncomeTax = 6000;
     const monthlyIncomeTax = monthlyPayCalc.calcMonthlyPayData(
@@ -61,7 +61,7 @@ describe("monthlyPayCalculator - calcMonthlyPayData", function () {
   });
 
   // Taxable Income Range: $80,001 - $180,000
-  it(`Valid - calcMonthlyPayData -$100000`, function () {
+  it(`Valid - calcMonthlyPayData $100000`, function () {
     const annualSalary = 100000;
     const annualIncomeTax = 16000;
     const monthlyIncomeTax = monthlyPayCalc.calcMonthlyPayData(
@@ -74,7 +74,7 @@ describe("monthlyPayCalculator - calcMonthlyPayData", function () {
   });
 
   // Taxable Income Range: Above $180,001
-  it(`Valid - calcMonthlyPayData -$200000`, function () {
+  it(`Valid - calcMonthlyPayData $200000`, function () {
     const annualSalary = 200000;
     const annualIncomeTax = 48000;
     const monthlyIncomeTax = monthlyPayCalc.calcMonthlyPayData(

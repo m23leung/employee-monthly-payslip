@@ -8,7 +8,7 @@ import annualPayCalculator from "../../../../src/components/annualPay/annualPayC
 describe("annualPayCalculator - calcIncomeTax", function () {
   const annualPayCalc = new annualPayCalculator();
 
-  // Taxable Income Edge Case: $-5
+  // Taxable Income Edge Case: $ -5
   it(`Valid - calcIncomeTax -$5`, function () {
     const annualSalary = -5;
     const annualIncomeTax = annualPayCalc.calcAnnualIncomeTax(annualSalary);

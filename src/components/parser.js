@@ -28,15 +28,10 @@ export default class parser {
     const annualSalary = inputLineArgs[inputLineArgs.length - 1];
 
     if (command == commandList.MONTHLY_SLIP) {
-      // TODO: Parse name for errors
-
       // If annual salary is negative or not number, throw error. Do not generate slip
-      if (!isValidNumber(annualSalary)) {
-        return false;
-      } else if (!isPositiveSalary(annualSalary)) {
+      if (!isValidNumber(annualSalary) || !isPositiveSalary(annualSalary)) {
         return false;
       }
-
       this.payslipGenerator.generateMonthlyPayslip(empName, annualSalary);
       return true;
     } else {

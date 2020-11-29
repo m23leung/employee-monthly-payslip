@@ -14,7 +14,9 @@ describe("parser - parseCommand", function () {
       `GenerateMonthlyPayslip "Bob Song" 0`
     );
     expect(isValidInput).to.be.equal(true);
+  });
 
+  it(`Valid - parseCommand #2`, function () {
     isValidInput = parserObj.parseCommand(
       `GenerateMonthlyPayslip "Mary Song" 60000`
     );
@@ -24,24 +26,30 @@ describe("parser - parseCommand", function () {
   it(`Invalid - parseCommand - Invalid Command`, function () {
     isValidInput = parserObj.parseCommand(`MonkeyCommand "Mary Song" 60000`);
     expect(isValidInput).to.be.equal(false);
+  });
 
-    isValidInput = parserObj.parseCommand(`MonkeyCommand "Mary Song" Barrel`);
-    expect(isValidInput).to.be.equal(false);
-
+  it(`Invalid - parseCommand - Empty Command`, function () {
     isValidInput = parserObj.parseCommand(``);
     expect(isValidInput).to.be.equal(false);
   });
 
-  it(`Invalid - parseCommand - Invalid Args`, function () {
-    isValidInput = parserObj.parseCommand(`GenerateMonthlyPayslip "Mary Song"`);
-    expect(isValidInput).to.be.equal(false);
-
+  it(`Invalid - parseCommand - Negative Annual Salary`, function () {
     isValidInput = parserObj.parseCommand(
       `GenerateMonthlyPayslip "Mary Song" -40000`
     );
     expect(isValidInput).to.be.equal(false);
 
     isValidInput = parserObj.parseCommand(`GenerateMonthlyPayslip`);
+    expect(isValidInput).to.be.equal(false);
+  });
+
+  it(`Invalid - parseCommand - No Employee Name & Annual Salary Args`, function () {
+    isValidInput = parserObj.parseCommand(`GenerateMonthlyPayslip`);
+    expect(isValidInput).to.be.equal(false);
+  });
+
+  it(`Invalid - parseCommand - No Annual Salary Arg`, function () {
+    isValidInput = parserObj.parseCommand(`GenerateMonthlyPayslip "Mary Song"`);
     expect(isValidInput).to.be.equal(false);
   });
 });

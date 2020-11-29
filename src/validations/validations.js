@@ -17,7 +17,7 @@ export const isValidNumber = (input) => {
 };
 
 /**
- * Checks if the number is positive
+ * Checks if the salary amount is positive
  * @param  input
  */
 export const isPositiveSalary = (salary) => {
