@@ -89,7 +89,7 @@ Note: Please make sure to have node.js installed.
 
 ![execution flow diagram](architecture_flow.png)
 
-- Single responsibility principle was implemented to design the above architecture diagram.
+- Single responsibility principle was implemented to design the architecture of the program.
 - Recursion was used to calculate the total taxable amount on the annual income (See annualPayCalculator.js).
 - Any constant/configurable data are stored in constants folder (valid commands, error messages, annual income tax table).
 - Some error checking has been added to ensure valid commands & arguments are entered. Otherwise, it will throw an error.
