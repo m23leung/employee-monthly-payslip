@@ -91,7 +91,7 @@ Note: Please make sure to have node.js installed.
 
 - Single responsibility principle was implemented to design the above architecture diagram.
 - Recursion was used to calculate the total taxable amount on the annual income (See annualPayCalculator.js).
-- Any constant/configurable data are stored in constants folder (Valid commands, Error messages, annual income tax table).
+- Any constant/configurable data are stored in constants folder (valid commands, error messages, annual income tax table).
 - Some error checking has been added to ensure valid commands & arguments are entered. Otherwise, it will throw an error.
 
 ## Testing
