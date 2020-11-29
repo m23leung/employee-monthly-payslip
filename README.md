@@ -96,8 +96,8 @@ Note: Please make sure to have node.js installed.
 
 ## Testing
 
-- I have implemented TDD during development, with proper unit testing. Please see test folder for the test cases.
+- TDD was implemented during development, with proper unit testing. Please see test folder for the test cases.
 
 ## Assumptions
 
-- I have made the assumption that if the annual salary entered is negative, to not generate the monthly payslip and instead, throw an error.
+- If the annual salary entered is negative, to not generate the monthly payslip and instead, throw an error.
